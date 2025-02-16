@@ -243,6 +243,8 @@ class Kindle2PDF:
             dict: A dictionary containing the downloaded images.
         """
         images = {}
+        if "cdn" not in manifest:
+            return images
         base_url = manifest["cdn"]["baseUrl"]
 
         params = parse_qs(manifest["cdn"]["authParameter"])
