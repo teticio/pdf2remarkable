@@ -32,6 +32,8 @@ The first time you run this, you will be asked to pair your device. Just follow 
 
 ## Troubleshooting
 
+* `Book <ASIN> is not available for download (ContentUnsupported)`. Some books can only be read on the Kindle App; if you are unable to open the book on https://read.amazon.com, then you will not be able to download it. In principle, it should be possible to extend `kindle2pdf` to cater for these cases, but it would be quite involved. If you are interested in undertaking this challenge then please open a Pull Request or reach out to me.
+
 * If you get a "Permission denied" error when running `kindle2pdf` on Windows, try closing any Chrome browsers.
 
 * If you have any other problems with cookies in spite of having logged in to `https://read.amazon.com`, please check `https://github.com/borisbabic/browser_cookie3/issues`.
