@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kindle2pdf"
-version = "0.5.1"
+version = "0.5.2"
 description = ""
 authors = ["Robert Dargavel Smith <teticio@gmail.com>"]
 readme = "README.md"
@@ -11,7 +11,7 @@ python = "^3.10"
 reportlab = "^4.1.0"
 cryptography = "^42.0.5"
 svglib = "^1.5.1"
-browser-cookie3 = "^0.19.1"
+browser-cookie3 = "^0.20.1"
 tqdm = "^4.66.2"
 requests = "^2.31.0"
 pypdf = "^5.0.1"
