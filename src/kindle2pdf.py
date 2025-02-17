@@ -38,6 +38,10 @@ handler.setLevel(logging.INFO)
 logger.addHandler(handler)
 
 
+# Patch for browser-cookie3 v0.20.1 (https://github.com/borisbabic/browser_cookie3/pull/220)
+browser_cookie3.all_browsers.pop()
+
+
 class Kindle2PDFError(Exception):
     """Base class for other Kindle2PDF exceptions"""
 
