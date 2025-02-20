@@ -348,7 +348,7 @@ class Kindle2PDF:
                     for start_pos in range(start_pos, child["startPositionId"] + 1):
                         pdf_canvas.bookmarkPage(start_pos)
 
-                    # update start_pos to next id only if the some ids were bookmarked.
+                    # update start_pos to next if only if the some ids were bookmarked.
                     # no-op otherwise
                     start_pos = max(start_pos, child["startPositionId"] + 1)
 
@@ -449,13 +449,16 @@ class Kindle2PDF:
                 if not jsons:
                     return None
 
-                start_pos = self.render_pdf(
-                    jsons=jsons,
-                    images=images,
-                    pdf_canvas=pdf_canvas,
-                    start_pos=start_pos,
-                    book_end_pos=self.session["end_pos"],
-                    progress=progress,
+                start_pos = max(
+                    self.render_pdf(
+                        jsons=jsons,
+                        images=images,
+                        pdf_canvas=pdf_canvas,
+                        start_pos=start_pos,
+                        book_end_pos=self.session["end_pos"],
+                        progress=progress,
+                    ),
+                    start_pos + 1,
                 )
 
         pdf_canvas.save()
