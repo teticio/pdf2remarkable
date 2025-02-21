@@ -1,5 +1,7 @@
 # PDF2Remarkable
 
+Upload PDFs to the reMarkable Cloud, which is particularly useful on Linux as the official desktop application is not available.
+
 ## Installation
 
 ```bash
