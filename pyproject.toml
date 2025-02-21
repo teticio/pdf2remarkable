@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "remarkable2pdf"
+version = "0.1.0"
+description = ""
+authors = ["Robert Dargavel Smith <teticio@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+pypdf = "^5.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pdf2remarkable = "src.pdf2remarkable:main"
